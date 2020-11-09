@@ -19,4 +19,4 @@ plt.show()
 print(df['Fails35NoPayIn90'].value_counts())
 
 ##########
-df.to_csv("targer.csv")
+df.to_csv("target.csv")
