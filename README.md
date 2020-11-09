@@ -1,1 +1,1 @@
-My final atestation work at IASA KPI. Kiev, Ukraine 
+My final attestation work at IASA KPI. Kiev, Ukraine 
