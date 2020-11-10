@@ -27,4 +27,4 @@ print(pred_pandas.value_counts())
 print(accuracy_score(y, pred))
 prob_y_2 = clf_1.predict_proba(X)
 prob_y_2 = [p[1] for p in prob_y_2]
-print("Roc_Auc_Score" +str(roc_auc_score(y,prob_y_2)))
+print("Roc_Auc_Score" + str(roc_auc_score(y, prob_y_2)))
