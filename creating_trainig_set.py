@@ -11,5 +11,8 @@ final_df = pd.merge(another_var, target_var, left_on='advanceID', right_on='adva
 print(final_df.info())
 print("#########################")
 final_df = final_df[final_df['Fails35NoPayIn90']!= '']
-print(final_df.info())
+print(final_df.describe())
+print("#########################")
+final_df.dropna(how="any",inplace=True)
+print(final_df.describe())
 final_df.to_csv("dataset")
