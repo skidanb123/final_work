@@ -3,6 +3,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.linear_model import LogisticRegression
 from sklearn.utils import resample
 import matplotlib.pyplot as plt
+from sklearn.metrics import roc_auc_score
 
 dataset = pd.read_csv("dataset", error_bad_lines=False, sep=',', low_memory=False,
                       index_col=0).astype({'Fails35NoPayIn90': 'int32'})
@@ -24,3 +25,6 @@ pred = clf_1.predict(X)
 pred_pandas = pd.Series(pred)
 print(pred_pandas.value_counts())
 print(accuracy_score(y, pred))
+prob_y_2 = clf_1.predict_proba(X)
+prob_y_2 = [p[1] for p in prob_y_2]
+print("Roc_Auc_Score" +str(roc_auc_score(y,prob_y_2)))
